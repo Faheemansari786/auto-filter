@@ -227,7 +227,7 @@ Nᴀᴍᴇ - {}
 Iᴅ : <code>{}</code>
 Nᴀᴍᴇ : {}
 
-Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
+Mᴇꜱꜱᴀɢᴇ : <code>{}</code>"""
     
     CAPTION = """<b><a href="https://t.me/akimaxmovieshub">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a href="https://t.me/akimaxmovieshub">[ AKIMAXMOVIESHUB ]</a></b>"""
 
