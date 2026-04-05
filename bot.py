@@ -83,7 +83,7 @@ def dreamxbotz_plugins_handler(app, plugins_dir: str | Path = "plugins", package
     return loaded_plugins
 
 async def dreamxbotz_start():
-    print('\n\nInitalizing DreamxBotz')
+    print('\n\nInitalizing AKIMAXMOVIESHUB')
     await dreamxbotz.start()
     bot_info = await dreamxbotz.get_me()
     dreamxbotz.username = bot_info.username
