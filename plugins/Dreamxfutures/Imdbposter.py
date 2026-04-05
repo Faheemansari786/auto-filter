@@ -475,7 +475,7 @@ async def get_movie_detailsx(query, id=False, file=None):
     """
     Primary movie details fetcher using direct TMDB API calls.
     Falls back to IMDb-based get_movie_details() on failure.
-    """
+
     q = str(query).strip()
     try:
         data = await _fetch_tmdb_data(q, api_key=TMDB_API_KEY or None)
