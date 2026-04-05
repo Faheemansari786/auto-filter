@@ -174,13 +174,12 @@ async def plan(client, message):
     btn = [[
             InlineKeyboardButton('• ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ •', callback_data='buy_info'),
         ],[
-            InlineKeyboardButton('• ʀᴇꜰᴇʀ ꜰʀɪᴇɴᴅꜱ', callback_data='reffff'),
-            InlineKeyboardButton('ꜰʀᴇᴇ ᴛʀɪᴀʟ •', callback_data='free')
+            InlineKeyboardButton('• ʀᴇꜰᴇʀ ꜰʀɪᴇɴᴅꜱ', callback_data='reffff')
         ],[
             InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
         ]]
     msg = await message.reply_photo(
-        photo="https://graph.org/file/86da2027469565b5873d6.jpg",
+        photo="https://ibb.co/9k9QT8sg",
         caption=script.BPREMIUM_TXT,
         reply_markup=InlineKeyboardMarkup(btn)
     )
