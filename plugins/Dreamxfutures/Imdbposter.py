@@ -340,7 +340,7 @@ async def get_movie_details(query, bulk=False, id=False, file=None):
     else:
         date = "N/A"
         
-    plot = movie.plot[0] if isinstance(movie.plot, list) else movie.plot or ""
+    plot = movie.plot[0] if isinstance(movie.plot, list) else movie.plot or """
     if len(plot) > 800:
         plot = plot[:800] + "..."
     imdb_id = movie.imdb_id
@@ -381,8 +381,8 @@ async def get_movie_details(query, bulk=False, id=False, file=None):
         'rating': str(movie.rating),
         "url": movie.url or f"https://www.imdb.com/title/{imdb_id}"
     }
-
-"""
+    
+    """
 async def old_get_movie_details(query, id=False, file=None):
     try:
         if not id:
