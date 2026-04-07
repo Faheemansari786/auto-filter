@@ -264,3 +264,32 @@ async def successful_premium_payment(client, message):
         await message.reply("✅ Thank You For Your Payment! (Error Logging Details)")
 
 
+@Client.on_message(filters.command("check_plan") & filters.user(ADMINS))
+async def check_plan(client, message):
+    if len(message.text.split()) == 1:
+        await message.reply_text("ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡɪᴛʜ ᴜsᴇʀ ɪᴅ... ʟɪᴋᴇ\n\n /check_plan ᴜsᴇʀ_ɪᴅ")
+        return
+    user_id = int(message.text.split(' ')[1])
+    user_data = await db.get_user(user_id)
+
+    if user_data and user_data.get("expiry_time"):
+        expiry = user_data.get("expiry_time")
+        expiry_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata"))
+        expiry_str_in_ist = expiry.astimezone(pytz.timezone("Asia/Kolkata")).strftime("%d-%m-%Y %I:%M:%S %p")
+        current_time = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        time_left = expiry_ist - current_time
+        days = time_left.days
+        hours, remainder = divmod(time_left.seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        time_left_str = f"{days} ᴅᴀʏs, {hours} ʜᴏᴜʀs, {minutes} ᴍɪɴᴜᴛᴇs"
+        response = (
+            f"ᴜsᴇʀ ɪᴅ: {user_id}\n"
+            f"ɴᴀᴍᴇ: {(await client.get_users(user_id)).mention}\n"
+            f"ᴇxᴘɪʀʏ ᴅᴀᴛᴇ: {expiry_str_in_ist}\n"
+            f"ᴇxᴘɪʀʏ ᴛɪᴍᴇ: {time_left_str}"
+        )
+    else:
+        response = "ᴜsᴇʀ ʜᴀᴠᴇ ɴᴏᴛ ᴀ ᴘʀᴇᴍɪᴜᴍ..."
+    await message.reply_text(response)
+
+
