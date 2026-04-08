@@ -131,6 +131,7 @@ async def start(client, message):
                 PIC = random.choice(PICS)
             await message.reply_photo(
                 photo=PIC,
+                has_spoiler=True,
                 caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
@@ -164,6 +165,7 @@ async def start(client, message):
                 PIC = random.choice(PICS)
             await message.reply_photo(
                 photo=PIC,
+                has_spoiler=True,
                 caption=script.START_TXT.format(message.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
@@ -270,6 +272,7 @@ async def start(client, message):
                     )
                     await message.reply_photo(
                         photo=photo,
+                        has_spoiler=True,
                         caption=caption,
                         reply_markup=reply_markup,
                         parse_mode=enums.ParseMode.HTML
@@ -360,6 +363,7 @@ async def start(client, message):
                         cover=cover,
                         file_id=file_id,
                         caption=f_caption,
+                        has_spoiler=True,
                         protect_content=settings.get('file_secure', PROTECT_CONTENT),
                         reply_markup=InlineKeyboardMarkup(btn)
                     )
@@ -396,6 +400,7 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     cover=cover,
                     file_id=file_id,
+                    has_spoiler=True,
                     protect_content=settings.get('file_secure', PROTECT_CONTENT),
                     reply_markup=InlineKeyboardMarkup(btn))
 
@@ -449,6 +454,7 @@ async def start(client, message):
             chat_id=message.from_user.id,
             file_id=file_id,
             cover=cover,
+            has_spoiler=True,
             caption=f_caption,
             protect_content=settings.get('file_secure', PROTECT_CONTENT),
             reply_markup=InlineKeyboardMarkup(btn)
