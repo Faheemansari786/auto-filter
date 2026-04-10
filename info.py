@@ -37,7 +37,7 @@ PICS = (environ.get('PICS', 'https://ibb.co/TMHpMqD7')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://graph.org/file/56b5deb73f3b132e2bb73.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://ibb.co/5WwQ3V5C'))
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://ibb.co/xKt8mK5D'))
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/bEB.jpg')).split()  # Fsub pic
 
 # ============================
@@ -61,7 +61,7 @@ auth_channels     = environ.get("AUTH_CHANNELS", "-1001764973106")# Channels for
 # ============================
 # Payment Configuration
 # ============================
-QR_CODE = environ.get('QR_CODE', 'https://ibb.co/5WwQ3V5C')    # QR code image for payments
+QR_CODE = environ.get('QR_CODE', 'https://ibb.co/xKt8mK5D')    # QR code image for payments
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'karo100@ptyes')    # Owner UPI ID for payments
 
 STAR_PREMIUM_PLANS = {
