@@ -47,8 +47,8 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001968420565').split()]  # Channel id for auto indexing (make sure bot is admin)
 
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001724209803'))  # Log channel id (make sure bot is admin)
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001966250588'))  # Bin channel id (make sure bot is admin)
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1001966250588'))  # Premium logs channel id
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003984669707'))  # Bin channel id (make sure bot is admin)
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003984669707'))  # Premium logs channel id
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001724209803').split()] #(make sure bot is admin)
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1003995469725')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002011043049')  # Request channel id (make sure bot is admin)
@@ -109,11 +109,11 @@ TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/HowToDownloadmovied")   # T
 SHORTENER_API = environ.get("SHORTENER_API", "27097bd6ad920f6a771f1430ba88a99de9a12cc0") # Shortener API key
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "get2short.com") # Shortener website
 
-SHORTENER_API2 = environ.get("SHORTENER_API2", "27097bd6ad920f6a771f1430ba88a99de9a12cc0")  # Shortener API key for second website
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "get2short.com") # Shortener website for second website
+SHORTENER_API2 = environ.get("SHORTENER_API2", "8fe5170ad220bd63c38727d645f7d3671f7829d6")  # Shortener API key for second website
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "liteshort.com") # Shortener website for second website
 
-SHORTENER_API3 = environ.get("SHORTENER_API3", "27097bd6ad920f6a771f1430ba88a99de9a12cc0")  
-SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "get2short.com") # Shortener website for third website
+SHORTENER_API3 = environ.get("SHORTENER_API3", "d2cab12ffb789b6f82a80fc7c7268f14384d81be")  
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "cpmshort.com") # Shortener website for third website
 
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "1200")) # Time gap for two-step verification in seconds (default: 20 minutes)
 THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))    
